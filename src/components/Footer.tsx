@@ -21,7 +21,7 @@ export default function Footer() {
                 {PROFILE_DATA.name} — {PROFILE_DATA.role}
               </p>
               <p className="text-xs text-slate-400">
-                B.Tech CSE &apos;24 (Lucknow) • Crafted with Next.js, Tailwind CSS &amp; Framer Motion
+                B.Tech CSE &apos;24 (Lucknow) • Blender • Video Editing • 3D Modeling • 3D Animation
               </p>
             </div>
           </div>

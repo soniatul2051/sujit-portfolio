@@ -49,7 +49,7 @@ export default function Navbar() {
               <span className="inline-block h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]" />
             </span>
             <span className="text-[11px] font-medium uppercase tracking-widest text-slate-400">
-              Motion & Video
+              3D &amp; Video
             </span>
           </div>
         </a>

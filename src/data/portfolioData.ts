@@ -5,7 +5,7 @@ export interface VideoProject {
   description: string;
   videoSrc: string;
   categories: string[];
-  featuredCategory: "Motion Graphics" | "Commercial Edit" | "VFX" | "Reel";
+  featuredCategory: "Video Editing" | "3D Modeling" | "3D Animation" | "Blender";
   duration: string;
   resolution: string;
   tools: string[];
@@ -15,7 +15,7 @@ export interface VideoProject {
 
 export interface SkillItem {
   name: string;
-  category: "Creative Craft" | "Pro Software" | "Web & Engineering";
+  category: string;
   level: string;
   highlight?: boolean;
 }
@@ -34,13 +34,13 @@ export interface TimelineItem {
 
 export const PROFILE_DATA = {
   name: "Sujit",
-  role: "Video Designer & Motion Creator",
-  tagline: "Bringing Ideas to Life Through Motion & Visual Design",
+  role: "3D Artist & Video Editor",
+  tagline: "Bringing Ideas to Life Through 3D Modeling, 3D Animation & Video Editing",
   education: "B.Tech in Computer Science & Engineering (Class of 2024, Lucknow)",
   location: "Lucknow, India",
   availability: "Available for Freelance & Full-Time Creative Roles",
   intro:
-    "Bridging algorithmic precision with cinematic storytelling. With a foundation in Computer Science & Engineering (Class of 2024, Lucknow) and a deep passion for visual rhythm, I craft high-retention motion graphics, commercial edits, and immersive visual experiences.",
+    "With a foundation in Computer Science & Engineering (Class of 2024, Lucknow) and a passion for visual craft, I specialize in Blender software, 3D modeling, 3D animation, and video editing.",
   email: "sujit.motion@example.com",
   socials: {
     linkedin: "https://linkedin.com",
@@ -53,126 +53,69 @@ export const PROFILE_DATA = {
 
 export const PORTFOLIO_CATEGORIES = [
   "All",
-  "Motion Graphics",
-  "Commercial Edit",
-  "VFX",
-  "Reel",
+  "Video Editing",
+  "3D Modeling",
+  "3D Animation",
+  "Blender",
 ] as const;
 
 export const VIDEO_PROJECTS: VideoProject[] = [
   {
     id: "showreel-v11",
-    title: "Kinetic Typography & Brand Motion Reel",
-    subtitle: "High-Energy Commercial & Motion Showcase",
+    title: "3D Animation & Video Editing Showreel",
+    subtitle: "Blender 3D Animation & Video Cut Showcase",
     description:
-      "Fast-paced visual storytelling combining kinetic typography, seamless speed-ramped transitions, custom sound design, and dynamic 3D camera moves tailored for modern digital brands.",
+      "Dynamic visual storytelling combining 3D animation created in Blender with crisp, fast-paced video editing and seamless scene transitions.",
     videoSrc: "/videos/v11.mp4",
-    categories: ["Motion Graphics", "Reel", "Commercial Edit"],
-    featuredCategory: "Motion Graphics",
+    categories: ["3D Animation", "Video Editing", "Blender"],
+    featuredCategory: "3D Animation",
     duration: "00:30",
     resolution: "1080p • 60fps",
-    tools: ["After Effects", "Premiere Pro", "DaVinci Resolve"],
+    tools: ["Blender", "Video Editing", "3D Animation"],
     year: "2024",
-    metrics: "Frame-Accurate Sync",
+    metrics: "Blender 3D Pipeline",
   },
   {
     id: "showreel-v12",
-    title: "Cinematic VFX & Visual Rhythm Edit",
-    subtitle: "Visual Effects, Color Grading & Narrative Flow",
+    title: "3D Modeling & Cinematic Animation Reel",
+    subtitle: "3D Modeling, Lighting & Animation in Blender",
     description:
-      "A stylized showcase featuring seamless VFX compositing, moody teal-and-cyan color grading, atmospheric soundscapes, and rhythmic cuts engineered for maximum viewer retention.",
+      "A stylized showcase featuring custom 3D modeling, environment building, 3D animation in Blender, and rhythmic video editing.",
     videoSrc: "/videos/v12.mp4",
-    categories: ["VFX", "Commercial Edit", "Reel"],
-    featuredCategory: "VFX",
+    categories: ["3D Modeling", "3D Animation", "Blender", "Video Editing"],
+    featuredCategory: "3D Modeling",
     duration: "00:35",
     resolution: "1080p • 60fps",
-    tools: ["DaVinci Resolve", "After Effects", "Premiere Pro"],
+    tools: ["Blender", "3D Modeling", "3D Animation", "Video Editing"],
     year: "2024",
-    metrics: "HDR Color Pipeline",
-  },
-  {
-    id: "commercial-pulse",
-    title: "Pulse Tech Product Launch Edit",
-    subtitle: "Commercial Cut & Sound-Driven Pacing",
-    description:
-      "Commercial launch edit demonstrating dynamic product reveals, clean motion callouts, and sub-frame audio synchronization built for social and web campaigns.",
-    videoSrc: "/videos/v11.mp4",
-    categories: ["Commercial Edit", "Motion Graphics"],
-    featuredCategory: "Commercial Edit",
-    duration: "00:30",
-    resolution: "1080p • 60fps",
-    tools: ["Premiere Pro", "After Effects"],
-    year: "2024",
-    metrics: "High-Retention Hook",
-  },
-  {
-    id: "signature-reel-2024",
-    title: "2024 Signature Director's Reel",
-    subtitle: "Selected Works in Motion, VFX & Color",
-    description:
-      "Curated anthology of commercial edits, compositing breakdowns, and expressive motion design systems fusing technical precision with artistic flair.",
-    videoSrc: "/videos/v12.mp4",
-    categories: ["Reel", "VFX", "Motion Graphics"],
-    featuredCategory: "Reel",
-    duration: "00:35",
-    resolution: "1080p • 60fps",
-    tools: ["After Effects", "DaVinci Resolve", "Premiere Pro"],
-    year: "2024",
-    metrics: "Multi-Genre Showcase",
+    metrics: "Custom 3D Assets",
   },
 ];
 
 export const SKILLS_LIST: SkillItem[] = [
   {
+    name: "Blender Software",
+    category: "3D & Video Software",
+    level: "Expert",
+    highlight: true,
+  },
+  {
     name: "Video Editing",
-    category: "Creative Craft",
+    category: "Core Craft",
     level: "Expert",
     highlight: true,
   },
   {
-    name: "Motion Graphics",
-    category: "Creative Craft",
+    name: "3D Modeling",
+    category: "3D Craft",
     level: "Expert",
     highlight: true,
   },
   {
-    name: "Color Grading",
-    category: "Creative Craft",
-    level: "Advanced",
-    highlight: true,
-  },
-  {
-    name: "Sound Design",
-    category: "Creative Craft",
-    level: "Advanced",
-  },
-  {
-    name: "Adobe Premiere Pro",
-    category: "Pro Software",
+    name: "3D Animation",
+    category: "3D Craft",
     level: "Expert",
     highlight: true,
-  },
-  {
-    name: "After Effects",
-    category: "Pro Software",
-    level: "Expert",
-    highlight: true,
-  },
-  {
-    name: "DaVinci Resolve",
-    category: "Pro Software",
-    level: "Advanced",
-    highlight: true,
-  },
-  {
-    name: "Next.js",
-    category: "Web & Engineering",
-    level: "Proficient",
-  },
-  {
-    name: "Tailwind CSS",
-    category: "Web & Engineering",
-    level: "Proficient",
   },
 ];
 
@@ -180,18 +123,18 @@ export const TIMELINE_DATA: TimelineItem[] = [
   {
     id: "video-designer-2024",
     period: "2024 — Present",
-    title: "Video Designer & Motion Creator",
-    organization: "Independent Creative Studio & Freelance",
+    title: "3D Artist & Video Editor",
+    organization: "Independent Creative & Freelance",
     location: "Lucknow / Remote",
     type: "Experience",
     description:
-      "Designing high-impact commercial edits, motion graphics packages, and brand showreels for digital creators, startups, and agencies.",
+      "Creating custom 3D models, 3D animations in Blender, and polished video edits for digital projects and visual showcases.",
     highlights: [
-      "Engineered modular After Effects motion templates and expression-driven animations that sped up turnaround time by 40%.",
-      "Delivered end-to-end post-production: narrative assembly in Premiere Pro, VFX compositing in After Effects, and cinematic grading in DaVinci Resolve.",
-      "Combined frontend web engineering (Next.js, Tailwind CSS) with interactive video delivery for modern web campaigns.",
+      "Designed detailed 3D models, textures, and environments using Blender software.",
+      "Produced fluid 3D animations and rendered visual sequences in Blender.",
+      "Delivered end-to-end video editing with clean pacing, transitions, and visual storytelling.",
     ],
-    tags: ["Motion Graphics", "Commercial Edit", "After Effects", "DaVinci Resolve"],
+    tags: ["Blender Software", "Video Editing", "3D Modeling", "3D Animation"],
   },
   {
     id: "btech-cse-2024",
@@ -201,12 +144,11 @@ export const TIMELINE_DATA: TimelineItem[] = [
     location: "Lucknow, Uttar Pradesh",
     type: "Education",
     description:
-      "Completed Bachelor of Technology in Computer Science & Engineering while spearheading multimedia production, college fest motion branding, and creative coding initiatives.",
+      "Completed Bachelor of Technology in Computer Science & Engineering while developing expertise in Blender software, 3D modeling, 3D animation, and video editing.",
     highlights: [
-      "Fused algorithmic problem-solving, scripting, and UI/UX sensibility with motion design and visual storytelling.",
-      "Directed and edited official campus event aftermovies, launch trailers, and motion graphics packages.",
-      "Built web interfaces and interactive media experiences using React, Next.js, and Tailwind CSS.",
+      "Combined technical problem-solving from Computer Science with 3D modeling and 3D animation in Blender.",
+      "Edited event videos, trailers, and 3D animated visual projects.",
     ],
-    tags: ["B.Tech CSE", "Class of 2024", "Lucknow", "Creative Technology"],
+    tags: ["B.Tech CSE", "Class of 2024", "Lucknow", "Blender", "Video Editing"],
   },
 ];

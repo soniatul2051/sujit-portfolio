@@ -52,9 +52,9 @@ export default function PortfolioSection() {
             >
               Selected{" "}
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Motion Reels
+                3D &amp; Video
               </span>{" "}
-              &amp; Edits
+              Showcases
             </motion.h2>
           </div>
 

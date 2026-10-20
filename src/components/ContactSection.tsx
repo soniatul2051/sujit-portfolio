@@ -50,7 +50,7 @@ export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    projectType: "Motion Graphics",
+    projectType: "Video Editing",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -62,7 +62,7 @@ export default function ContactSection() {
       setFormData({
         name: "",
         email: "",
-        projectType: "Motion Graphics",
+        projectType: "Video Editing",
         message: "",
       });
     }, 400);
@@ -97,9 +97,8 @@ export default function ContactSection() {
             </h2>
 
             <p className="text-slate-300/90 text-base leading-relaxed">
-              Whether you need a high-converting commercial edit, custom motion
-              graphics package, VFX compositing, or an interactive video showcase,
-              drop a message below.
+              Whether you need video editing, 3D modeling, or 3D animation in
+              Blender software, drop a message below.
             </p>
 
             <div className="flex items-center gap-3 text-sm text-slate-300 pt-1">
@@ -245,16 +244,11 @@ export default function ContactSection() {
                       }
                       className="w-full rounded-xl border border-white/10 bg-[#090d16]/90 px-4 py-3.5 text-sm text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition"
                     >
-                      <option value="Motion Graphics">Motion Graphics</option>
-                      <option value="Commercial Edit">Commercial Edit</option>
-                      <option value="VFX & Color Grading">
-                        VFX &amp; Color Grading
-                      </option>
-                      <option value="Showreel / Brand Film">
-                        Showreel / Brand Film
-                      </option>
-                      <option value="Creative Web + Video">
-                        Creative Web + Video
+                      <option value="Video Editing">Video Editing</option>
+                      <option value="3D Modeling">3D Modeling</option>
+                      <option value="3D Animation">3D Animation</option>
+                      <option value="Blender Software Project">
+                        Blender Software Project
                       </option>
                     </select>
                   </div>

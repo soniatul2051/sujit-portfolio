@@ -10,7 +10,7 @@ import {
   Film,
   Volume2,
   VolumeX,
-  Layers,
+  Box,
   Clapperboard,
 } from "lucide-react";
 import { PROFILE_DATA } from "@/data/portfolioData";
@@ -94,7 +94,7 @@ export default function Hero() {
             >
               Bringing Ideas to Life Through{" "}
               <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-                Motion & Visual Design
+                3D Animation &amp; Video Editing
               </span>
             </motion.h1>
 
@@ -109,8 +109,10 @@ export default function Hero() {
               <span className="text-cyan-300 font-medium">
                 B.Tech in Computer Science &amp; Engineering (Class of 2024, Lucknow)
               </span>{" "}
-              graduate turning algorithmic thinking into cinematic motion graphics,
-              high-retention commercial edits, and visual storytelling.
+              graduate specializing in <strong className="text-white">Blender software</strong>,{" "}
+              <strong className="text-white">3D modeling</strong>,{" "}
+              <strong className="text-white">3D animation</strong>, and{" "}
+              <strong className="text-white">video editing</strong>.
             </motion.p>
 
             {/* Dual Identity Pills */}
@@ -121,12 +123,12 @@ export default function Hero() {
               className="flex flex-wrap gap-3 pt-1"
             >
               <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 px-3.5 py-2 text-xs sm:text-sm text-slate-300">
-                <Clapperboard className="h-4 w-4 text-purple-400" />
-                <span>Motion Graphics &amp; VFX</span>
+                <Box className="h-4 w-4 text-purple-400" />
+                <span>Blender Software • 3D Modeling &amp; 3D Animation</span>
               </div>
               <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 px-3.5 py-2 text-xs sm:text-sm text-slate-300">
-                <Layers className="h-4 w-4 text-cyan-400" />
-                <span>Premiere Pro • After Effects • DaVinci</span>
+                <Clapperboard className="h-4 w-4 text-cyan-400" />
+                <span>Video Editing</span>
               </div>
               <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 px-3.5 py-2 text-xs sm:text-sm text-slate-300">
                 <Code2 className="h-4 w-4 text-emerald-400" />
@@ -207,7 +209,7 @@ export default function Hero() {
                         Featured Showreel
                       </p>
                       <h3 className="text-sm sm:text-base font-bold text-white">
-                        Motion Graphics &amp; Visual Cut
+                        3D Animation &amp; Video Editing
                       </h3>
                     </div>
 

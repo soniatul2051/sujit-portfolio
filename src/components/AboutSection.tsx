@@ -4,37 +4,36 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   User,
-  Cpu,
-  Wand2,
-  Sliders,
-  Code2,
-  CheckCircle2,
+  Box,
+  Film,
   Sparkles,
+  CheckCircle2,
+  Clapperboard,
 } from "lucide-react";
 import { SKILLS_LIST } from "@/data/portfolioData";
 
 const PILLARS = [
   {
-    icon: Wand2,
-    title: "Motion & Visual Rhythm",
+    icon: Box,
+    title: "3D Modeling",
     description:
-      "Designing kinetic typography, seamless transitions, and sound-synced cuts that command viewer attention from the very first frame.",
+      "Creating detailed 3D models, assets, textures, and environments inside Blender software.",
     accent: "from-purple-500/20 to-indigo-500/10 border-purple-500/30",
     iconColor: "text-purple-400",
   },
   {
-    icon: Sliders,
-    title: "Color & Post Pipeline",
+    icon: Sparkles,
+    title: "3D Animation",
     description:
-      "Crafting cinematic moods in DaVinci Resolve, complex VFX composites in After Effects, and narrative pacing in Premiere Pro.",
+      "Bringing 3D scenes and objects to life with smooth keyframe animation, lighting, and rendering in Blender.",
     accent: "from-cyan-500/20 to-blue-500/10 border-cyan-500/30",
     iconColor: "text-cyan-400",
   },
   {
-    icon: Cpu,
-    title: "CS-Driven Precision",
+    icon: Film,
+    title: "Video Editing",
     description:
-      "Leveraging a B.Tech CSE foundation for expression scripting, workflow automation, and interactive web video experiences.",
+      "Crafting clean, engaging video edits with seamless transitions, pacing, and visual storytelling.",
     accent: "from-fuchsia-500/20 to-purple-500/10 border-fuchsia-500/30",
     iconColor: "text-fuchsia-400",
   },
@@ -63,7 +62,7 @@ export default function AboutSection() {
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Computer Science
               </span>{" "}
-              Meets Cinematic Motion
+              Meets 3D &amp; Video Craft
             </h2>
 
             <div className="space-y-4 text-slate-300/90 text-base leading-relaxed">
@@ -73,19 +72,17 @@ export default function AboutSection() {
                 <span className="text-cyan-300 font-medium">
                   B.Tech in Computer Science &amp; Engineering (Class of 2024)
                 </span>
-                . While mastering algorithms, data structures, and modern web
-                architecture, I discovered a magnetic pull toward visual
-                storytelling, frame-accurate editing, and motion design.
+                . Alongside my engineering studies, I developed a strong passion
+                for visual creation, 3D art, and video production.
               </p>
               <p>
-                What started as directing and editing campus event trailers
-                evolved into a full-fledged craft. My engineering background gives
-                me a distinct edge in post-production—whether writing JavaScript
-                expressions in <strong className="text-white">After Effects</strong>,
-                structuring node graphs in{" "}
-                <strong className="text-white">DaVinci Resolve</strong>, or
-                deploying interactive video showcases with{" "}
-                <strong className="text-white">Next.js &amp; Tailwind CSS</strong>.
+                Today, I focus on{" "}
+                <strong className="text-white">Blender software</strong>,{" "}
+                <strong className="text-white">3D modeling</strong>,{" "}
+                <strong className="text-white">3D animation</strong>, and{" "}
+                <strong className="text-white">video editing</strong>—turning
+                creative concepts into polished 3D visuals and dynamic video
+                cuts.
               </p>
             </div>
 
@@ -123,10 +120,10 @@ export default function AboutSection() {
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
-                    Creative &amp; Technical Arsenal
+                    Core Capabilities
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mt-0.5">
-                    Skills &amp; Software Suite
+                    Skills &amp; Software
                   </h3>
                 </div>
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-500/15 border border-purple-500/30">
@@ -143,7 +140,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.05 }}
-                    className={`group flex items-center justify-between rounded-2xl border p-3.5 transition-all duration-300 ${
+                    className={`group flex items-center justify-between rounded-2xl border p-4 transition-all duration-300 ${
                       skill.highlight
                         ? "border-purple-500/30 bg-gradient-to-r from-purple-950/40 to-slate-900/80 hover:border-cyan-400/50"
                         : "border-white/10 bg-slate-900/60 hover:border-white/25"
@@ -168,15 +165,17 @@ export default function AboutSection() {
                 ))}
               </div>
 
-              {/* Bottom Engineering + Motion Callout */}
+              {/* Bottom Callout */}
               <div className="mt-6 rounded-2xl border border-cyan-500/25 bg-cyan-500/5 p-4 flex items-center gap-3.5">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300">
-                  <Code2 className="h-5 w-5" />
+                  <Clapperboard className="h-5 w-5" />
                 </div>
                 <p className="text-xs sm:text-sm text-slate-300">
-                  <strong className="text-white">Hybrid Workflow:</strong> Equally
-                  at home keyframing bezier curves in After Effects and shipping
-                  modern web components in Next.js &amp; Tailwind CSS.
+                  <strong className="text-white">Focused Workflow:</strong>{" "}
+                  Specialized in <strong className="text-white">Blender software</strong>{" "}
+                  for <strong className="text-white">3D modeling</strong> and{" "}
+                  <strong className="text-white">3D animation</strong>, paired with{" "}
+                  <strong className="text-white">video editing</strong>.
                 </p>
               </div>
             </div>

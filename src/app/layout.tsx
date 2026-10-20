@@ -13,9 +13,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Sujit | Video Designer & Motion Creator",
+  title: "Sujit | 3D Artist & Video Editor",
   description:
-    "Personal portfolio of Sujit — Video Designer, Motion Creator, and B.Tech CSE (Class of 2024, Lucknow) graduate specializing in Motion Graphics, Commercial Edits, VFX, and Color Grading.",
+    "Personal portfolio of Sujit — B.Tech CSE (Class of 2024, Lucknow) graduate specializing in Blender software, Video Editing, 3D Modeling, and 3D Animation.",
 };
 
 export default function RootLayout({

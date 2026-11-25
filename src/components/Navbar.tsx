@@ -36,6 +36,7 @@ export default function Navbar() {
         {/* Brand Logo */}
         <a
           href="#top"
+          onClick={() => setMobileMenuOpen(false)}
           className="group flex items-center gap-3 focus:outline-none"
         >
           <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-cyan-500 p-[1px] shadow-[0_0_20px_rgba(168,85,247,0.35)] transition-transform duration-300 group-hover:scale-105">

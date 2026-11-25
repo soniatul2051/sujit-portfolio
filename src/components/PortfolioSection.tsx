@@ -24,14 +24,14 @@ export default function PortfolioSection() {
         );
 
   return (
-    <section id="portfolio" className="relative py-24 sm:py-28">
+    <section id="portfolio" className="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
       {/* Subtle Ambient Accent */}
       <div className="pointer-events-none absolute top-1/3 right-0 h-96 w-96 rounded-full bg-purple-600/10 blur-[140px]" />
       <div className="pointer-events-none absolute bottom-10 left-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-[140px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4 sm:gap-6">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -76,7 +76,7 @@ export default function PortfolioSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
-          className="flex items-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar"
+          className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 sm:mb-10 no-scrollbar"
         >
           <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-slate-400 mr-2 shrink-0">
             <SlidersHorizontal className="h-3.5 w-3.5 text-purple-400" />
@@ -104,7 +104,7 @@ export default function PortfolioSection() {
         {/* Video Grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
@@ -135,22 +135,23 @@ export default function PortfolioSection() {
               exit={{ scale: 0.92, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl overflow-hidden rounded-3xl border border-white/15 bg-[#0f172a] shadow-2xl"
+              className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl sm:rounded-3xl border border-white/15 bg-[#0f172a] shadow-2xl"
             >
               {/* Modal Top Bar */}
-              <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
-                <div>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
+              <div className="flex items-center justify-between gap-3 border-b border-white/10 px-4 py-3 sm:px-6 sm:py-4">
+                <div className="min-w-0">
+                  <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-cyan-400">
                     {selectedProject.featuredCategory} • {selectedProject.resolution}
                   </span>
-                  <h3 className="text-lg sm:text-xl font-bold text-white">
+                  <h3 className="text-base sm:text-xl font-bold text-white truncate">
                     {selectedProject.title}
                   </h3>
                 </div>
                 <button
                   type="button"
                   onClick={() => setSelectedProject(null)}
-                  className="rounded-full border border-white/15 bg-white/5 p-2 text-slate-300 transition hover:border-rose-500/50 hover:bg-rose-500/20 hover:text-white"
+                  aria-label="Close modal"
+                  className="shrink-0 rounded-full border border-white/15 bg-white/5 p-2 text-slate-300 transition hover:border-rose-500/50 hover:bg-rose-500/20 hover:text-white"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -168,7 +169,7 @@ export default function PortfolioSection() {
               </div>
 
               {/* Modal Footer Details */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 sm:p-6">
                 <p className="text-sm text-slate-300 max-w-2xl">
                   {selectedProject.description}
                 </p>

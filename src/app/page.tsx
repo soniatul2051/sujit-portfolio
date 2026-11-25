@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen bg-[#090d16] text-slate-100">
+    <div className="relative min-h-screen overflow-x-clip bg-[#090d16] text-slate-100">
       <Navbar />
       <main>
         <Hero />

@@ -13,12 +13,12 @@ import { TIMELINE_DATA } from "@/data/portfolioData";
 
 export default function TimelineSection() {
   return (
-    <section id="timeline" className="relative py-24 sm:py-28">
+    <section id="timeline" className="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[420px] w-[720px] rounded-full bg-purple-600/10 blur-[150px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function TimelineSection() {
         </div>
 
         {/* Vertical Timeline */}
-        <div className="relative border-l-2 border-purple-500/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
+        <div className="relative border-l-2 border-purple-500/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-8 sm:space-y-12">
           {TIMELINE_DATA.map((item, idx) => {
             const isEducation = item.type === "Education";
             const Icon = isEducation ? GraduationCap : Briefcase;
@@ -59,12 +59,12 @@ export default function TimelineSection() {
                 className="relative group"
               >
                 {/* Glowing Timeline Node */}
-                <div className="absolute -left-[37px] sm:-left-[53px] top-1 flex h-10 w-10 items-center justify-center rounded-full border border-purple-400/50 bg-[#090d16] text-cyan-400 shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-transform duration-300 group-hover:scale-110">
-                  <Icon className="h-5 w-5" />
+                <div className="absolute -left-[41px] sm:-left-[61px] top-1 flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-purple-400/50 bg-[#090d16] text-cyan-400 shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-transform duration-300 group-hover:scale-110">
+                  <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
 
                 {/* Card */}
-                <div className="rounded-3xl border border-white/10 bg-[#0f172a]/85 p-6 sm:p-8 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_15px_40px_-15px_rgba(34,211,238,0.2)]">
+                <div className="rounded-3xl border border-white/10 bg-[#0f172a]/85 p-5 sm:p-8 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_15px_40px_-15px_rgba(34,211,238,0.2)]">
                   <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
                     <span
                       className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${

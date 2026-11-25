@@ -69,13 +69,13 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 sm:py-28 overflow-hidden">
+    <section id="contact" className="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
       {/* Ambient Background Glow */}
       <div className="pointer-events-none absolute -bottom-24 right-1/4 h-96 w-96 rounded-full bg-cyan-500/15 blur-[140px]" />
       <div className="pointer-events-none absolute top-10 left-10 h-80 w-80 rounded-full bg-purple-600/15 blur-[140px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left Info & Social Links */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -157,7 +157,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-7"
           >
-            <div className="rounded-3xl border border-white/10 bg-[#0f172a]/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+            <div className="rounded-3xl border border-white/10 bg-[#0f172a]/90 p-5 sm:p-10 shadow-2xl backdrop-blur-xl">
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}

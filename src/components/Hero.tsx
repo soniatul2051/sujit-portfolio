@@ -28,7 +28,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-20"
     >
       {/* Animated Glowing Background Orbs & Grid */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -66,9 +66,9 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left Column: Text & CTAs */}
-          <div className="lg:col-span-7 space-y-7 text-left">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-7 text-left">
             {/* Status Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]"
+              className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]"
             >
               Bringing Ideas to Life Through{" "}
               <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
@@ -120,18 +120,18 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.28 }}
-              className="flex flex-wrap gap-3 pt-1"
+              className="flex flex-wrap gap-2 sm:gap-3 pt-1"
             >
-              <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 px-3.5 py-2 text-xs sm:text-sm text-slate-300">
-                <Box className="h-4 w-4 text-purple-400" />
+              <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 px-3 py-2 sm:px-3.5 text-xs sm:text-sm text-slate-300">
+                <Box className="h-4 w-4 shrink-0 text-purple-400" />
                 <span>Blender Software • 3D Modeling &amp; 3D Animation</span>
               </div>
-              <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 px-3.5 py-2 text-xs sm:text-sm text-slate-300">
-                <Clapperboard className="h-4 w-4 text-cyan-400" />
+              <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 px-3 py-2 sm:px-3.5 text-xs sm:text-sm text-slate-300">
+                <Clapperboard className="h-4 w-4 shrink-0 text-cyan-400" />
                 <span>Video Editing</span>
               </div>
-              <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 px-3.5 py-2 text-xs sm:text-sm text-slate-300">
-                <Code2 className="h-4 w-4 text-emerald-400" />
+              <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/70 px-3 py-2 sm:px-3.5 text-xs sm:text-sm text-slate-300">
+                <Code2 className="h-4 w-4 shrink-0 text-emerald-400" />
                 <span>B.Tech CSE &apos;24 (Lucknow)</span>
               </div>
             </motion.div>
@@ -141,11 +141,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
-              className="flex flex-wrap items-center gap-4 pt-2"
+              className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-2"
             >
               <a
                 href="#portfolio"
-                className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 px-7 py-4 text-sm sm:text-base font-semibold text-white shadow-[0_0_30px_rgba(139,92,246,0.45)] transition-all duration-300 hover:shadow-[0_0_45px_rgba(34,211,238,0.65)] hover:scale-[1.02]"
+                className="group relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 px-6 py-3.5 sm:px-7 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-[0_0_30px_rgba(139,92,246,0.45)] transition-all duration-300 hover:shadow-[0_0_45px_rgba(34,211,238,0.65)] hover:scale-[1.02]"
               >
                 <Play className="h-4 w-4 fill-white text-white transition-transform group-hover:scale-110" />
                 <span>View Work</span>
@@ -154,7 +154,7 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-slate-900/80 px-7 py-4 text-sm sm:text-base font-semibold text-slate-200 backdrop-blur-md transition-all duration-300 hover:border-cyan-400/50 hover:bg-slate-800/80 hover:text-white"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/15 bg-slate-900/80 px-6 py-3.5 sm:px-7 sm:py-4 text-sm sm:text-base font-semibold text-slate-200 backdrop-blur-md transition-all duration-300 hover:border-cyan-400/50 hover:bg-slate-800/80 hover:text-white"
               >
                 <Sparkles className="h-4 w-4 text-cyan-400" />
                 <span>Get in Touch</span>
@@ -175,16 +175,16 @@ export default function Hero() {
 
               <div className="relative rounded-3xl border border-white/15 bg-[#0f172a]/90 p-3 shadow-2xl backdrop-blur-xl">
                 {/* Top Window Bar */}
-                <div className="flex items-center justify-between px-3 py-2 mb-2 border-b border-white/10">
-                  <div className="flex items-center gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
-                    <span className="ml-2 text-xs font-mono text-slate-400">
+                <div className="flex items-center justify-between gap-2 px-2 sm:px-3 py-2 mb-2 border-b border-white/10">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-rose-500/80" />
+                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-amber-500/80" />
+                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500/80" />
+                    <span className="ml-1 sm:ml-2 truncate text-xs font-mono text-slate-400">
                       featured_reel_v11.mp4
                     </span>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/15 px-2.5 py-0.5 text-[11px] font-semibold text-cyan-300 border border-cyan-500/30">
+                  <span className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-cyan-500/15 px-2.5 py-0.5 text-[11px] font-semibold text-cyan-300 border border-cyan-500/30">
                     <Film className="h-3 w-3" />
                     60 FPS
                   </span>
@@ -203,12 +203,12 @@ export default function Hero() {
                   />
 
                   {/* Subtle Bottom Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#090d16]/90 via-transparent to-transparent flex items-end justify-between p-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#090d16]/90 via-transparent to-transparent flex items-end justify-between gap-2 p-3 sm:p-4">
+                    <div className="min-w-0">
+                      <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-cyan-400">
                         Featured Showreel
                       </p>
-                      <h3 className="text-sm sm:text-base font-bold text-white">
+                      <h3 className="text-sm sm:text-base font-bold text-white truncate">
                         3D Animation &amp; Video Editing
                       </h3>
                     </div>
@@ -217,7 +217,7 @@ export default function Hero() {
                       type="button"
                       onClick={toggleMute}
                       aria-label={isMuted ? "Unmute showreel" : "Mute showreel"}
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-900/80 text-white backdrop-blur-md transition hover:border-cyan-400 hover:bg-cyan-500/20"
+                      className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-slate-900/80 text-white backdrop-blur-md transition hover:border-cyan-400 hover:bg-cyan-500/20"
                     >
                       {isMuted ? (
                         <VolumeX className="h-4 w-4 text-slate-300" />
@@ -229,17 +229,17 @@ export default function Hero() {
                 </div>
 
                 {/* Mini Timeline UI Decoration */}
-                <div className="mt-3 px-2 py-1.5 flex items-center justify-between text-xs text-slate-400 font-mono">
-                  <div className="flex items-center gap-2">
+                <div className="mt-3 px-2 py-1.5 flex items-center justify-between gap-2 text-[11px] sm:text-xs text-slate-400 font-mono">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
                     <span className="text-purple-400 font-semibold">TC</span>
                     <span>00:00:14:22</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="h-1.5 w-8 rounded-full bg-purple-500/60" />
-                    <span className="h-1.5 w-12 rounded-full bg-cyan-400/70" />
-                    <span className="h-1.5 w-6 rounded-full bg-fuchsia-500/60" />
+                  <div className="flex items-center gap-1 sm:gap-1.5">
+                    <span className="h-1.5 w-5 sm:w-8 rounded-full bg-purple-500/60" />
+                    <span className="h-1.5 w-8 sm:w-12 rounded-full bg-cyan-400/70" />
+                    <span className="h-1.5 w-4 sm:w-6 rounded-full bg-fuchsia-500/60" />
                   </div>
-                  <span className="text-cyan-300">REC • 4K</span>
+                  <span className="text-cyan-300 shrink-0">REC • 4K</span>
                 </div>
               </div>
             </div>

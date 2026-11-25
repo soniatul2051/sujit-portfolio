@@ -41,9 +41,9 @@ const PILLARS = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative py-24 sm:py-28 overflow-hidden">
+    <section id="about" className="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Left Column: Story & Journey */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -116,7 +116,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-6"
           >
-            <div className="rounded-3xl border border-white/10 bg-[#0f172a]/90 p-6 sm:p-8 shadow-2xl backdrop-blur-xl">
+            <div className="rounded-3xl border border-white/10 bg-[#0f172a]/90 p-5 sm:p-8 shadow-2xl backdrop-blur-xl">
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
@@ -140,15 +140,15 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.05 }}
-                    className={`group flex items-center justify-between rounded-2xl border p-4 transition-all duration-300 ${
+                    className={`group flex items-center justify-between gap-2 rounded-2xl border p-4 transition-all duration-300 ${
                       skill.highlight
                         ? "border-purple-500/30 bg-gradient-to-r from-purple-950/40 to-slate-900/80 hover:border-cyan-400/50"
                         : "border-white/10 bg-slate-900/60 hover:border-white/25"
                     }`}
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
                       <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0 transition-transform group-hover:scale-110" />
-                      <div>
+                      <div className="min-w-0">
                         <p className="text-sm font-semibold text-white">
                           {skill.name}
                         </p>
@@ -158,7 +158,7 @@ export default function AboutSection() {
                       </div>
                     </div>
 
-                    <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[11px] font-medium text-purple-200">
+                    <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[11px] font-medium text-purple-200">
                       {skill.level}
                     </span>
                   </motion.div>

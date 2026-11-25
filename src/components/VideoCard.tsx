@@ -112,19 +112,21 @@ export default function VideoCard({
         />
 
         {/* Top Badges */}
-        <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
-          <div className="flex flex-wrap gap-1.5">
-            {project.categories.map((cat) => (
+        <div className="absolute top-2.5 left-2.5 right-2.5 sm:top-3.5 sm:left-3.5 sm:right-3.5 flex items-start justify-between gap-2 pointer-events-none">
+          <div className="flex flex-wrap gap-1 sm:gap-1.5">
+            {project.categories.map((cat, idx) => (
               <span
                 key={cat}
-                className="rounded-full border border-white/15 bg-[#090d16]/80 px-3 py-1 text-[11px] font-semibold tracking-wide text-cyan-300 backdrop-blur-md"
+                className={`${
+                  idx >= 2 ? "hidden sm:inline-block" : ""
+                } rounded-full border border-white/15 bg-[#090d16]/80 px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-[11px] font-semibold tracking-wide text-cyan-300 backdrop-blur-md`}
               >
                 {cat}
               </span>
             ))}
           </div>
 
-          <span className="inline-flex items-center gap-1 rounded-full bg-[#090d16]/80 border border-white/10 px-2.5 py-1 text-[11px] font-mono text-slate-300 backdrop-blur-md">
+          <span className="shrink-0 inline-flex items-center gap-1 rounded-full bg-[#090d16]/80 border border-white/10 px-2 py-0.5 sm:px-2.5 sm:py-1 text-[10px] sm:text-[11px] font-mono text-slate-300 backdrop-blur-md">
             <Clock className="h-3 w-3 text-purple-400" />
             {project.duration}
           </span>
@@ -136,17 +138,17 @@ export default function VideoCard({
             isPlaying ? "opacity-0" : "opacity-100"
           }`}
         >
-          <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/25 bg-purple-600/80 text-white shadow-[0_0_30px_rgba(168,85,247,0.6)] backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
-            <Play className="h-6 w-6 fill-white ml-0.5" />
+          <div className="flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-full border border-white/25 bg-purple-600/80 text-white shadow-[0_0_30px_rgba(168,85,247,0.6)] backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
+            <Play className="h-5 w-5 sm:h-6 sm:w-6 fill-white ml-0.5" />
           </div>
         </div>
 
         {/* Custom Video Controls Bar */}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#090d16] via-[#090d16]/75 to-transparent p-3.5 pt-8">
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#090d16] via-[#090d16]/75 to-transparent p-2.5 pt-6 sm:p-3.5 sm:pt-8">
           {/* Interactive Progress Scrubber */}
           <div
             onClick={handleSeek}
-            className="group/bar mb-2.5 h-1.5 w-full cursor-pointer overflow-hidden rounded-full bg-white/20"
+            className="group/bar mb-2 sm:mb-2.5 h-1.5 w-full cursor-pointer overflow-hidden rounded-full bg-white/20"
           >
             <div
               className="h-full rounded-full bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-100"
@@ -154,7 +156,7 @@ export default function VideoCard({
             />
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <button
                 type="button"
@@ -182,7 +184,7 @@ export default function VideoCard({
                 )}
               </button>
 
-              <span className="ml-1 text-[11px] font-mono text-slate-300">
+              <span className="hidden sm:inline ml-1 text-[11px] font-mono text-slate-300">
                 {isPlaying ? "Playing • Hover/Click" : "Hover to Preview"}
               </span>
             </div>
@@ -204,9 +206,9 @@ export default function VideoCard({
       </div>
 
       {/* Project Details */}
-      <div className="flex flex-1 flex-col justify-between p-6">
+      <div className="flex flex-1 flex-col justify-between p-4 sm:p-6">
         <div>
-          <div className="flex items-center justify-between gap-2 text-xs text-purple-300/90 font-medium mb-1.5">
+          <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-purple-300/90 font-medium mb-1.5">
             <span>{project.subtitle}</span>
             {project.metrics && (
               <span className="inline-flex items-center gap-1 text-cyan-400">
@@ -216,7 +218,7 @@ export default function VideoCard({
             )}
           </div>
 
-          <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+          <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
             {project.title}
           </h3>
 
@@ -237,7 +239,7 @@ export default function VideoCard({
               </span>
             ))}
           </div>
-          <span className="text-xs font-mono text-slate-400">
+          <span className="text-xs font-mono text-slate-400 truncate max-w-[160px] sm:max-w-none">
             {project.videoSrc}
           </span>
         </div>
